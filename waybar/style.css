@@ -1,0 +1,124 @@
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: bold;
+    min-height: 0;
+}
+
+window#waybar {
+    color: #2e3440;
+    background-color: transparent;
+}
+
+button {
+    border: none;
+}
+
+#workspaces {
+    border-radius: 0 9px 9px 0;
+    background-color: #d8dee9;
+    padding-right: 2px;
+}
+
+#workspaces button {
+    font-size: 13pt;  
+    padding: 5px;
+}
+
+#workspaces button:hover {
+    color: #99999b;
+    background: transparent;
+    box-shadow: none;
+}
+
+#workspaces button.urgent {
+    color: red;
+}
+
+#custom-hyprland {
+    color: #89b4fa;
+    background-color: #d8dee9;
+    font-size: 14pt;
+    padding: 0 12px;
+    border-radius: 9px 0 0 9px;
+}
+
+#pulseaudio {
+    color: #d32335;
+    background-color: #d8dee9;
+    padding-right: 7px;
+}
+
+#language {
+    background-color: #d8dee9;
+    padding-right: 5px;
+    border-radius: 0 9px 9px 0;
+}
+
+#clock {
+    background-color: #d8dee9;
+    padding: 0 10px;
+    border-radius: 9px 0 0 9px;
+}
+
+#custom-tray-collapsed {
+    color: #5e81ac;
+    background-color: #d8dee9;
+    font-size: 15pt;
+    padding-right: 16px;
+    padding-left: 6px;
+}
+
+#custom-tray-left-end {
+    background-color: #d8dee9;
+    border-right: none;
+    border-radius: 10px 0 0 10px;
+}
+
+#tray {
+    background-color: #d8dee9;
+    padding: 0 5px;
+}
+
+#custom-telegram {
+    color: #10A5D9;
+    background-color: #d8dee9;
+    font-size: 15pt;
+    margin-left: 7px;
+    padding-right: 18px;
+    padding-left: 10px;
+    border-radius: 9px 0 0 9px;
+}
+
+#custom-firefox {
+    color: #d08770;
+    background-color: #d8dee9;
+    font-size: 17pt;
+    padding-left: 3px;
+    padding-right: 12px;
+    border-radius: 0 9px 9px 0;
+}
+
+#custom-ciadpi {
+    background-color: #d8dee9;
+    font-size: 15pt;
+    margin-right: 8px;
+    padding-right: 15px;
+    padding-left: 8px;
+    border-radius: 0 9px 9px 0;
+}
+
+#custom-ciadpi.active {
+    color: #a3be8c; /* Зеленый цвет для активного состояния */
+}
+  
+#custom-ciadpi.inactive {
+    color: #bf616a; /* Красный цвет для неактивного состояния */
+}
+
+#custom-bluetooth {
+    color: #5e81ac;
+    background-color: #d8dee9;
+    font-size: 14pt;
+    padding-left: 5px;
+    padding-right: 6px
+}

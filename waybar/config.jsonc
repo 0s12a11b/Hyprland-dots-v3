@@ -1,0 +1,120 @@
+{
+    "height": 0,
+    "width": 1890,
+    "margin-top": 8,
+    "modules-left": [
+        "custom/hyprland",
+        "hyprland/workspaces",
+        "custom/telegram",
+        "custom/firefox"
+    ],
+    "modules-center": [
+    ],
+    "modules-right": [
+        "custom/tray-left-end", "group/sys-tray",
+        "pulseaudio",
+        "custom/bluetooth",
+        "custom/ciadpi",
+        "clock",
+        "hyprland/language"
+    ],
+
+	"hyprland/workspaces": {
+		"format": "{icon}",
+		"on-click": "activate",
+		"format-icons": {
+			"active": "",
+			"default": ""
+			},
+		"tooltip": false,
+        "persistent-workspaces": {
+            "*": 3
+        }
+	},
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%d.%m.%Y}",
+        "calendar": {
+                "mode"          : "month",
+                "mode-mon-col"  : 3,
+                "weeks-pos"     : "right",
+                "on-scroll"     : 1,
+                "format": {
+                          "months":     "<span color='#ffead3'><b>{}</b></span>",
+                          "days":       "<span color='#d8dee9'><b>{}</b></span>",
+                          "weeks":      "<span color='#99ffdd'><b>Неделя {}</b></span>",
+                          "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                          "today":      "<span color='#5e81ac'><b>{}</b></span>"
+                          }
+                },
+        "actions":  {
+                    "on-click-right": "mode",
+                    "on-scroll-up": "shift_up",
+                    "on-scroll-down": "shift_down"
+                    }
+    },
+    "pulseaudio": {
+        "scroll-step": 3,
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{icon} {volume}%",
+        "format-icons": {
+            "default": ["󰋕 󰋕 󰋕", "󰛞 󰋕 󰋕", "󰋑 󰋕 󰋕", "󰋑 󰛞 󰋕", "󰋑 󰋑 󰋕", "󰋑 󰋑 󰛞", "󰋑 󰋑 󰋑"]
+        },
+        "on-click": "pavucontrol",
+        "tooltip": false
+    },
+    "hyprland/language": {
+        "format": "{} ",
+        "format-en": "US",
+        "format-ru": "RU"
+    },
+    "custom/hyprland": {
+        "format": ""
+    },
+    "custom/tray-collapsed": {
+      "format": "󰜦",
+      "tooltip": false
+    },
+    "custom/tray-left-end": {
+      "format": " ",
+      "tooltip": false
+    },
+    "group/sys-tray": {
+      "orientation": "horizontal",
+      "drawer": {
+        "transition-duration": 400,
+        "transition-left-to-right": false
+      },
+      "modules": [
+        "custom/tray-collapsed",
+        "tray"
+      ]
+    },
+    "tray": {
+        "icon-size": 17,
+        "spacing": 10
+    },
+    "custom/telegram": {
+        "format": "",
+        "on-click": "$HOME/.config/waybar/scripts/telegram.sh",
+        "tooltip": false
+    },
+    "custom/firefox": {
+        "format": "󰈹",
+        "on-click": "$HOME/.config/waybar/scripts/firefox.sh",
+        "tooltip": false
+    },
+    "custom/ciadpi": {
+        "exec": "$HOME/.config/waybar/scripts/ciadpi_status.sh",
+        "return-type": "json",
+        "interval": 1,
+        "tooltip": false,
+        "on-click": "$HOME/.config/waybar/scripts/toggle_ciadpi.sh"
+    },
+    "custom/bluetooth": {
+        "exec": "$HOME/.config/waybar/scripts/bluetooth_status.sh",
+        "return-type": "json",
+        "interval": 5,
+        "on-click": "$HOME/.config/waybar/scripts/toggle_bluetooth.sh"
+    }
+}
