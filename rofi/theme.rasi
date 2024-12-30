@@ -1,0 +1,90 @@
+/*****----- Конфигурация -----*****/
+configuration {
+    modi:                       "drun,run";
+    show-icons:                 true;
+    drun-display-format:        "{name}";
+}
+
+/*****----- Общие настройки -----*****/
+* {
+    font:                        "JetBrains Mono 12";
+    background:                  #2E3440;  /* Nord тёмно-серый фон */
+    background-alt:              #3B4252;  /* Nord альтернативный фон */
+    foreground:                  #D8DEE9;  /* Светлый текст */
+    selected:                    #5E81AC;  /* Цвет выделения */
+    active:                      #88C0D0;  /* Голубой активный цвет */
+    urgent:                      #BF616A;  /* Красный для срочных элементов */
+}
+
+/*****----- Главное окно -----*****/
+window {
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       600px;
+    border-radius:               10px;
+    background-color:            @background; /* Чёткий фон окна */
+}
+
+/*****----- Ободок -----*****/
+mainbox {
+    spacing:                     0px;
+    background-color:            @background;
+    children:                    [ "inputbar", "listview" ];
+}
+
+/*****----- Строка ввода -----*****/
+inputbar {
+    enabled:                     true;
+    spacing:                     10px;
+    padding:                     12px;
+    border-radius:               8px;
+    background-color:            @background-alt;
+    text-color:                  @foreground;
+    children:                    [ "entry" ];
+}
+entry {
+    enabled:                     true;
+    background-color:            inherit;
+    text-color:                  inherit;
+    cursor:                      text;
+    placeholder:                 "Поиск...";
+    placeholder-color:           #4C566A; /* Серый текст плейсхолдера */
+}
+
+/*****----- Приложения -----*****/
+listview {
+    enabled:                     true;
+    columns:                     1;
+    lines:                       8;
+    cycle:                       true;
+    scrollbar:                   false;
+    spacing:                     5px;
+    background-color:            @background;
+    text-color:                  @foreground;
+}
+
+/*****----- Элементы -----*****/
+element {
+    padding:                     8px;
+    border-radius:               5px;
+    background-color:            @background-alt;
+    text-color:                  @foreground;
+}
+element normal.normal {
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+element selected.normal {
+    background-color:            @selected;
+    text-color:                  #2E3440;
+}
+element-icon {
+    size:                        24px;
+    margin:                      0px 10px;
+    background-color:            transparent;
+}
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+}
